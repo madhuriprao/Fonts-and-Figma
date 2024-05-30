@@ -17,7 +17,7 @@ display: inline-block;
     color: #33A2E0;
 }
 
-.Home{
+.Home, .About, .Blog, .Contact, .Sign-in, .Sign-up{
     font-family:'Roboto', sans-serif;
     font-size: normal;
     font-weight: normal;
@@ -28,82 +28,6 @@ display: inline-block;
     margin-top: 37px;
     margin-left: 97px; 
 }
-
-.About{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #1B0A42;
-    margin-top: 37px;
-    margin-left: 38px; 
-}
-
-.Blog{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #1B0A42;
-    margin-top: 37px;
-    margin-left: 40px; 
-}
-
-.Contact{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #1B0A42;
-    margin-top: 37px;
-    margin-left: 38px; 
-}
-.Contact{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #1B0A42;
-    margin-top: 37px;
-    margin-left: 38px; 
-}
-.Sign-in{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #1B0A42;
-    margin-top: 37px;
-    margin-left: 472px; 
-}
-.Sign-up{
-    font-family:'Roboto', sans-serif;
-    font-size: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-    margin-top: 37px;
-    margin-left: 40px; 
-    width: 120px;
-    height: 60px;
-    border: none;
-    background-color: #33A2E0;
-    border-radius: 6px;
-    border: none;
-}
-
 
 section{
     display: inline-block;
@@ -154,3 +78,61 @@ section{
     border: none;
 }
 
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0c1644;
+    background-color: #0c16449d;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+.overlay-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    /* position: relative; */
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    background-color: #95D5B2;
+    color: black;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

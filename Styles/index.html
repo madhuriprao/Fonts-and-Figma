@@ -18,14 +18,20 @@
   <body>
     <header>
       <h3 class="logo">Medi<span class="logo-dot">.</span></h3>
+      <span class="open-btn" onclick="openNav()">☰</span>
     </header>
-    <header><h4 class="Home">Home</h4></header>
-    <header><h4 class="About">About</h4></header>
-    <header><h4 class="Blog">Blog</h4></header>
-    <header><h4 class="Contact">Contact</h4></header>
-    <header><h4 class="Sign-in">Sign-in</h4></header>
-    <header><button class="Sign-up">Sign up</button></header>
+    <div id="myNav" class="overlay">
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
 
+        <a href="#" class="Home">Home</a>
+        <a href="#" class="About">About</a>
+        <a href="#" class="Blog">Blog</a>
+        <a href="#" class="Contact">Contact</a>
+        <a href="#" class="Sign-in">Sign-in</a>
+        <a href="#" class="Sign-up">Sign up</a>
+      </div>
+    </div>
     <main>
       <section>
         <h1 class="main-title">Productive & Work Remotely</h1>
@@ -39,6 +45,17 @@
       <section>
         <img src="/Images/Frame1.png" alt="Meditating image of a girl" />
       </section>
+    
     </main>
+      
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+      }
+      </script>
   </body>
 </html>
